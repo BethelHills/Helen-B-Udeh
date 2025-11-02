@@ -538,6 +538,7 @@ section {
 
 .skills .section-title,
 .skills .section-tag,
+.skills .section-description,
 .skills .category-title {
     color: white;
 }
@@ -566,13 +567,23 @@ section {
 
 .skill-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     transition: var(--transition);
     color: white;
+}
+
+.skill-item span {
+    flex: 1;
+    line-height: 1.6;
+}
+
+.skill-item i {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
 }
 
 .skill-item:hover {
