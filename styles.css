@@ -78,6 +78,8 @@ body {
     max-width: 200px;
     object-fit: contain;
     transition: var(--transition);
+    filter: brightness(0.9) contrast(1.2);
+    -webkit-filter: brightness(0.9) contrast(1.2);
 }
 
 .logo a:hover .logo-image {
