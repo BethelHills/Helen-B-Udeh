@@ -14,7 +14,7 @@
 After creating the repository on GitHub, copy the repository URL and run:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/Helen-B-Udeh-Portfolio.git
+git remote add origin https://github.com/BethelHills/Helen-B-Udeh-Portfolio.git
 ```
 
 Replace `YOUR_USERNAME` with your GitHub username.
