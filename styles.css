@@ -453,6 +453,46 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
 }
 
+/* Services summary icons and alignment (scoped to Pretty ProDesk page) */
+.pretty-page .services-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+
+.pretty-page .services-summary li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+}
+
+.pretty-page .services-summary .service-icon {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.pretty-page .services-summary li span {
+    display: inline-block;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .pretty-page .services-summary ul {
+        grid-template-columns: 1fr;
+    }
+}
+
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
