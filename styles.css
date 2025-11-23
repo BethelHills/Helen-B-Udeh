@@ -440,7 +440,15 @@ section {
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
+    .pretty-page .service-card.ea-card h4 {
+        text-align: center;
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
     letter-spacing: 1px;
+    .pretty-page .ea-includes {
+        margin-top: 0.75rem; /* add breathing room between heading and list */
+    }
     margin-bottom: 1rem;
 }
 
