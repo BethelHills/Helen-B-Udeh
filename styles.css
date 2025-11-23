@@ -461,6 +461,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
+    text-align: left; /* ensure left alignment */
 }
 
 .pretty-page .services-summary li {
@@ -487,6 +488,7 @@ section {
     display: inline-block;
     line-height: 1.4;
     margin-top: -2px; /* small nudge for tighter baseline alignment */
+    text-align: left; /* left-align text within the span */
 }
 
 .pretty-page .services-summary li .service-icon {
