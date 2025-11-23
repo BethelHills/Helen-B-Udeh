@@ -674,6 +674,43 @@ section {
     box-shadow: var(--shadow-xl);
 }
 
+/* Executive Assistant includes list with icons */
+.pretty-page .ea-includes ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.pretty-page .ea-includes li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.4rem 0;
+    color: var(--text-dark);
+}
+
+.pretty-page .ea-li-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    flex: 0 0 40px;
+}
+
+@media (min-width: 768px) {
+    .pretty-page .ea-includes ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .service-icon {
     width: 80px;
     height: 80px;
