@@ -444,6 +444,15 @@ section {
     margin-bottom: 1rem;
 }
 
+/* Scoped override: white background tag for Pretty ProDesk about section */
+.pretty-page .about-tag {
+    background: #ffffff !important;
+    color: var(--text-dark) !important;
+    padding: 0.6rem 1.6rem !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
+}
+
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
