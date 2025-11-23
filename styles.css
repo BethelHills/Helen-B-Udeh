@@ -507,12 +507,14 @@ section {
 
 /* Services description under the list */
 .pretty-page .services-desc {
-    text-align: center;
+    /* left-align description so it lines up with the services list */
+    text-align: left;
     max-width: 800px;
-    margin: 1.5rem auto 0 auto;
+    margin: 1.5rem 0 0 0; /* don't auto-center — keep flush to the left */
     color: var(--text-light);
     font-size: 1.05rem;
     line-height: 1.6;
+    padding-left: 0;
 }
 
 .pretty-page .services-desc p {
@@ -1350,6 +1352,15 @@ section {
     .hero-buttons .btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* Responsive: keep services description centered on narrow screens for readability */
+@media (max-width: 768px) {
+    .pretty-page .services-desc {
+        text-align: center;
+        margin: 1.5rem auto 0 auto;
+        padding: 0 1rem;
     }
 }
 
