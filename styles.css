@@ -114,6 +114,19 @@ body {
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
+/* Scoped image rules for Pretty ProDesk page */
+.pretty-page .about-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto; /* allow natural height */
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.pretty-page .image-wrapper {
+    display: block;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
