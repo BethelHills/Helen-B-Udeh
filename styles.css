@@ -703,6 +703,8 @@ section {
 .pretty-page .ea-intro {
     text-indent: 0;
     padding-left: 0;
+    text-align: center; /* center the intro sentence */
+    margin: 0 auto 1.25rem auto; /* add space below intro before the list */
 }
 
 .pretty-page .ea-includes li {
