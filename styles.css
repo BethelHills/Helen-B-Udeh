@@ -140,6 +140,12 @@ body {
     z-index: 2;
 }
 
+.pretty-page .force-visible {
+    display: block !important;
+    margin: 0 auto !important;
+    opacity: 1 !important;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
