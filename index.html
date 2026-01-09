@@ -453,14 +453,12 @@
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
-                                <a href="#" class="portfolio-link" aria-label="View project">
-                                    <i class="fas fa-external-link-alt"></i>
+                                <a href="#" class="portfolio-link" id="view-travel-gallery" aria-label="View travel gallery">
+                                    <i class="fas fa-images"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="image-placeholder-portfolio">
-                            <i class="fas fa-folder-open"></i>
-                        </div>
+                        <img src="assets/images/travel1.png" alt="Travel Planning & Itinerary" class="portfolio-img">
                     </div>
                     <div class="portfolio-content">
                         <h3 class="portfolio-title">Travel Planning & Itinerary</h3>
@@ -473,6 +471,7 @@
                             <span class="tag">Itinerary Management</span>
                             <span class="tag">Coordination</span>
                         </div>
+                        <a href="#" class="btn btn-primary" id="view-travel-btn" style="margin-top: 1rem; display: inline-block;">View Gallery</a>
                     </div>
                 </div>
             </div>
@@ -716,6 +715,29 @@
                 </div>
                 <div class="gallery-image">
                     <img src="assets/images/Asana3.png" alt="Project Management & Workflow 3" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Travel Gallery Modal -->
+    <div id="travel-gallery-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="travel-gallery-backdrop"></div>
+        <div class="modal-content gallery-modal" role="dialog" aria-modal="true" aria-labelledby="travel-gallery-title">
+            <button class="modal-close" id="travel-gallery-close" aria-label="Close">&times;</button>
+            <h2 id="travel-gallery-title">Travel Planning & Itinerary Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-image">
+                    <img src="assets/images/travel1.png" alt="Travel Planning & Itinerary 1" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/travel2.png" alt="Travel Planning & Itinerary 2" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/travel3.png" alt="Travel Planning & Itinerary 3" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/travel4.jpg" alt="Travel Planning & Itinerary 4" class="gallery-img">
                 </div>
             </div>
         </div>

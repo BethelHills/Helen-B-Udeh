@@ -452,5 +452,52 @@ if (asanaGalleryModal) {
     });
 }
 
+// Travel Gallery Modal
+const travelGalleryBtn = document.getElementById('view-travel-gallery');
+const travelGalleryBtn2 = document.getElementById('view-travel-btn');
+const travelGalleryModal = document.getElementById('travel-gallery-modal');
+const travelGalleryClose = document.getElementById('travel-gallery-close');
+const travelGalleryBackdrop = document.getElementById('travel-gallery-backdrop');
+
+if (travelGalleryModal) {
+    const openTravelGallery = () => {
+        travelGalleryModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeTravelGallery = () => {
+        travelGalleryModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    if (travelGalleryBtn) {
+        travelGalleryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openTravelGallery();
+        });
+    }
+
+    if (travelGalleryBtn2) {
+        travelGalleryBtn2.addEventListener('click', (e) => {
+            e.preventDefault();
+            openTravelGallery();
+        });
+    }
+
+    if (travelGalleryClose) {
+        travelGalleryClose.addEventListener('click', closeTravelGallery);
+    }
+
+    if (travelGalleryBackdrop) {
+        travelGalleryBackdrop.addEventListener('click', closeTravelGallery);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && travelGalleryModal.getAttribute('aria-hidden') === 'false') {
+            closeTravelGallery();
+        }
+    });
+}
+
 console.log('Portfolio website loaded successfully!');
 
