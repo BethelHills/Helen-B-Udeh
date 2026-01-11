@@ -190,9 +190,8 @@ if (testimonialCards.length > 0) {
 // 2. Create an email service (Gmail recommended)
 // 3. Create an email template with these variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
 // 4. In the template, set TO field to: helenudeh.va@gmail.com
-// 5. Add theprettyprodesk@gmail.com to BCC field in the template
-// 6. Get your Public Key, Service ID, and Template ID from EmailJS dashboard
-// 7. Replace the placeholders below with your actual values
+// 5. Get your Public Key, Service ID, and Template ID from EmailJS dashboard
+// 6. Replace the placeholders below with your actual values
 
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
@@ -227,7 +226,7 @@ if (contactForm) {
             }, function(error) {
                 console.log('FAILED...', error);
                 // Fallback to mailto link if EmailJS fails or is not configured
-                const mailtoLink = `mailto:helenudeh.va@gmail.com,theprettyprodesk@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                const mailtoLink = `mailto:helenudeh.va@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
                 window.location.href = mailtoLink;
                 alert('Opening your email client...');
             });
