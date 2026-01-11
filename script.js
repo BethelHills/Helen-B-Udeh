@@ -195,8 +195,8 @@ if (testimonialCards.length > 0) {
 
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-    // Initialize EmailJS - Replace YOUR_PUBLIC_KEY with your actual EmailJS Public Key
-    emailjs.init("YOUR_PUBLIC_KEY");
+    // Initialize EmailJS with Public Key
+    emailjs.init("nFFvdIg6N1CqUuW1B");
     
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -223,8 +223,7 @@ if (contactForm) {
         };
 
         // Send email using EmailJS
-        // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your actual values from EmailJS
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_fpa518p', 'template_6hdit42', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 // Show success message
