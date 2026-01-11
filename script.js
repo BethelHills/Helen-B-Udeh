@@ -184,29 +184,53 @@ if (testimonialCards.length > 0) {
     }
 }
 
-// Contact Form Handling
+// Contact Form Handling with EmailJS
+// SETUP REQUIRED: 
+// 1. Sign up at https://www.emailjs.com/
+// 2. Create an email service (Gmail recommended)
+// 3. Create an email template with these variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+// 4. In the template, set TO field to: helenudeh.va@gmail.com
+// 5. Add theprettyprodesk@gmail.com to BCC field in the template
+// 6. Get your Public Key, Service ID, and Template ID from EmailJS dashboard
+// 7. Replace the placeholders below with your actual values
+
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
+    // Initialize EmailJS - Replace YOUR_PUBLIC_KEY with your actual EmailJS Public Key
+    emailjs.init("YOUR_PUBLIC_KEY");
+    
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         // Get form data
-        const formData = {
-            name: document.getElementById('name') ? document.getElementById('name').value : '',
-            email: document.getElementById('email') ? document.getElementById('email').value : '',
-            subject: document.getElementById('subject') ? document.getElementById('subject').value : '',
-            message: document.getElementById('message') ? document.getElementById('message').value : ''
+        const name = document.getElementById('name') ? document.getElementById('name').value : '';
+        const email = document.getElementById('email') ? document.getElementById('email').value : '';
+        const subject = document.getElementById('subject') ? document.getElementById('subject').value : '';
+        const message = document.getElementById('message') ? document.getElementById('message').value : '';
+
+        // EmailJS template parameters
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+            reply_to: email
         };
 
-        // Here you would typically send the data to a server
-        // For now, we'll just show an alert
-        console.log('Form submitted:', formData);
-
-        // Show success message (you can replace this with actual form submission)
-        alert('Thank you for your message! I will get back to you soon.');
-
-        // Reset form
-        contactForm.reset();
+        // Send email using EmailJS
+        // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your actual values from EmailJS
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                // Fallback to mailto link if EmailJS fails or is not configured
+                const mailtoLink = `mailto:helenudeh.va@gmail.com,theprettyprodesk@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                window.location.href = mailtoLink;
+                alert('Opening your email client...');
+            });
     });
 }
 
