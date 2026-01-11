@@ -546,5 +546,52 @@ if (dataGalleryModal) {
     });
 }
 
+// Expense Gallery Modal
+const expenseGalleryBtn = document.getElementById('view-expense-gallery');
+const expenseGalleryBtn2 = document.getElementById('view-expense-btn');
+const expenseGalleryModal = document.getElementById('expense-gallery-modal');
+const expenseGalleryClose = document.getElementById('expense-gallery-close');
+const expenseGalleryBackdrop = document.getElementById('expense-gallery-backdrop');
+
+if (expenseGalleryModal) {
+    const openExpenseGallery = () => {
+        expenseGalleryModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeExpenseGallery = () => {
+        expenseGalleryModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    if (expenseGalleryBtn) {
+        expenseGalleryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openExpenseGallery();
+        });
+    }
+
+    if (expenseGalleryBtn2) {
+        expenseGalleryBtn2.addEventListener('click', (e) => {
+            e.preventDefault();
+            openExpenseGallery();
+        });
+    }
+
+    if (expenseGalleryClose) {
+        expenseGalleryClose.addEventListener('click', closeExpenseGallery);
+    }
+
+    if (expenseGalleryBackdrop) {
+        expenseGalleryBackdrop.addEventListener('click', closeExpenseGallery);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && expenseGalleryModal.getAttribute('aria-hidden') === 'false') {
+            closeExpenseGallery();
+        }
+    });
+}
+
 console.log('Portfolio website loaded successfully!');
 

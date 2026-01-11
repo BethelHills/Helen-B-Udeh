@@ -506,14 +506,12 @@
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
-                                <a href="#" class="portfolio-link" aria-label="View project">
-                                    <i class="fas fa-external-link-alt"></i>
+                                <a href="#" class="portfolio-link" id="view-expense-gallery" aria-label="View expense gallery">
+                                    <i class="fas fa-images"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="image-placeholder-portfolio">
-                            <i class="fas fa-folder-open"></i>
-                        </div>
+                        <img src="assets/images/Expense tracker.png" alt="Executive Expense Tracking & Reporting" class="portfolio-img">
                     </div>
                     <div class="portfolio-content">
                         <h3 class="portfolio-title">Executive Expense Tracking & Reporting</h3>
@@ -528,6 +526,7 @@
                             <span class="tag">Financial Reporting</span>
                             <span class="tag">Budget Management</span>
                         </div>
+                        <a href="#" class="btn btn-primary" id="view-expense-btn" style="margin-top: 1rem; display: inline-block;">View Gallery</a>
                     </div>
                 </div>
             </div>
@@ -814,6 +813,20 @@
                 </div>
                 <div class="gallery-image">
                     <img src="assets/images/Data3.png" alt="Data Entry & Research 3" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expense Gallery Modal -->
+    <div id="expense-gallery-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="expense-gallery-backdrop"></div>
+        <div class="modal-content gallery-modal" role="dialog" aria-modal="true" aria-labelledby="expense-gallery-title">
+            <button class="modal-close" id="expense-gallery-close" aria-label="Close">&times;</button>
+            <h2 id="expense-gallery-title">Executive Expense Tracking & Reporting Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-image">
+                    <img src="assets/images/Expense tracker.png" alt="Expense Tracker" class="gallery-img">
                 </div>
             </div>
         </div>
