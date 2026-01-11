@@ -593,5 +593,52 @@ if (expenseGalleryModal) {
     });
 }
 
+// Dashboard Gallery Modal
+const dashboardGalleryBtn = document.getElementById('view-dashboard-gallery');
+const dashboardGalleryBtn2 = document.getElementById('view-dashboard-btn');
+const dashboardGalleryModal = document.getElementById('dashboard-gallery-modal');
+const dashboardGalleryClose = document.getElementById('dashboard-gallery-close');
+const dashboardGalleryBackdrop = document.getElementById('dashboard-gallery-backdrop');
+
+if (dashboardGalleryModal) {
+    const openDashboardGallery = () => {
+        dashboardGalleryModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeDashboardGallery = () => {
+        dashboardGalleryModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    if (dashboardGalleryBtn) {
+        dashboardGalleryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openDashboardGallery();
+        });
+    }
+
+    if (dashboardGalleryBtn2) {
+        dashboardGalleryBtn2.addEventListener('click', (e) => {
+            e.preventDefault();
+            openDashboardGallery();
+        });
+    }
+
+    if (dashboardGalleryClose) {
+        dashboardGalleryClose.addEventListener('click', closeDashboardGallery);
+    }
+
+    if (dashboardGalleryBackdrop) {
+        dashboardGalleryBackdrop.addEventListener('click', closeDashboardGallery);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && dashboardGalleryModal.getAttribute('aria-hidden') === 'false') {
+            closeDashboardGallery();
+        }
+    });
+}
+
 console.log('Portfolio website loaded successfully!');
 
