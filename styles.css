@@ -1444,6 +1444,15 @@ section {
     color: transparent;
 }
 
+.brand-story-tagline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: normal;
+}
+
 /* Brand Story modal logo styling */
 .brand-story-logo {
     display: block;
