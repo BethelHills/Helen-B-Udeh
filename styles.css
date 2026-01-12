@@ -1641,6 +1641,16 @@ section {
         text-align: center;
     }
 
+    .footer-brand h3 {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
     .nav-menu {
         position: fixed;
         top: 70px;
