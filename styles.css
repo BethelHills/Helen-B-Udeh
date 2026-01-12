@@ -626,24 +626,35 @@ section {
     gap: 2rem;
     margin: 2rem 0;
     padding: 2rem 0;
+    visibility: visible;
+    opacity: 1;
 }
 
 .stat-item {
     text-align: center;
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     color: #ec4899;
     margin-bottom: 0.5rem;
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .stat-label {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Services Section */
@@ -1630,6 +1641,16 @@ section {
 
     .about-stats {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
     }
 
     .services-grid {
@@ -1674,6 +1695,20 @@ section {
 
     .hero-title .title {
         font-size: 1.2rem;
+    }
+
+    .about-stats {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
     }
 
     section {
