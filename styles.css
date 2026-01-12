@@ -533,6 +533,8 @@ section {
 
     .pretty-page .services-summary li {
         grid-template-columns: 36px 1fr;
+        gap: 1rem; /* increased gap between icon and text on mobile */
+        padding: 0.6rem 0; /* increased vertical padding for better spacing */
     }
 }
 
