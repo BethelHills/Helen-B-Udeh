@@ -53,6 +53,8 @@ body {
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: var(--transition);
+    height: auto;
+    min-height: 70px;
 }
 
 .navbar.scrolled {
@@ -239,7 +241,8 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    padding-top: clamp(100px, 12vh, 120px);
+    padding-bottom: 2rem;
     overflow: hidden;
 }
 
@@ -281,6 +284,8 @@ body {
     align-items: center;
     position: relative;
     z-index: 1;
+    width: 100%;
+    padding-top: 1rem;
 }
 
 .hero-text {
