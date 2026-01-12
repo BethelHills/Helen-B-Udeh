@@ -799,10 +799,9 @@ if (reviewModal && leaveReviewBtn) {
             };
 
             // Send email using EmailJS
-            // Note: You'll need to create a new template in EmailJS for reviews
-            // Use the same service ID: service_fpa518p
-            // Create a new template (e.g., template_review) and use its ID here
-            emailjs.send('service_fpa518p', 'template_review', templateParams)
+            // Using Template ID: template_qq34hpm
+            // Service ID: service_fpa518p
+            emailjs.send('service_fpa518p', 'template_qq34hpm', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     // Show success message
