@@ -277,7 +277,7 @@ body {
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
     position: relative;
     z-index: 1;
@@ -286,26 +286,27 @@ body {
 .hero-text {
     color: white;
     animation: fadeInUp 1s ease;
+    max-width: 100%;
 }
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
     display: flex;
     flex-direction: column;
 }
 
 .hero-title .greeting {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: 400;
     margin-bottom: 0.5rem;
     opacity: 0.9;
 }
 
 .hero-title .name {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
     background: linear-gradient(to right, #fff, #f0f0f0);
@@ -315,16 +316,17 @@ body {
 }
 
 .hero-title .title {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 3vw, 2rem);
     font-weight: 400;
     color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    margin-bottom: clamp(1rem, 2.5vw, 2rem);
     line-height: 1.8;
     opacity: 0.95;
+    max-width: 100%;
 }
 
 .hero-buttons {
@@ -415,15 +417,17 @@ body {
 
 .hero-photo {
     /* responsive circular frame */
-    width: clamp(160px, 22vw, 300px);
-    height: clamp(160px, 22vw, 300px);
+    width: clamp(180px, 25vw, 320px);
+    height: clamp(180px, 25vw, 320px);
     border-radius: 50%;
     object-fit: cover;
     /* position image to show top (head) instead of centering */
     object-position: 50% 20%;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+    border: clamp(3px, 0.5vw, 5px) solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
+    max-width: 100%;
+    display: block;
 }
 
 .hero-photo:hover {
@@ -1648,6 +1652,31 @@ section {
 }
 
 @media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .hero-photo {
+        width: clamp(200px, 40vw, 280px);
+        height: clamp(200px, 40vw, 280px);
+    }
+
+    .hero-title {
+        text-align: center;
+    }
+
+    .hero-description {
+        text-align: left;
+        max-width: 100%;
+    }
+
     .hero-title .name {
         font-size: 2.5rem;
     }
@@ -1688,6 +1717,7 @@ section {
 
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
     }
 
     .hero-buttons .btn {
@@ -1706,8 +1736,23 @@ section {
 }
 
 @media (max-width: 480px) {
+    .hero-content {
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero-image {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-photo {
+        width: clamp(180px, 50vw, 240px);
+        height: clamp(180px, 50vw, 240px);
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
 
     .hero-title .name {
@@ -1715,7 +1760,17 @@ section {
     }
 
     .hero-title .title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        gap: 0.75rem;
     }
 
     .about-stats {
@@ -1729,7 +1784,6 @@ section {
 
     .stat-label {
         font-size: 0.75rem;
-    }
     }
 
     section {
