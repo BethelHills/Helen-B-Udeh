@@ -778,17 +778,58 @@ if (reviewModal && leaveReviewBtn) {
             e.preventDefault();
             
             // Get form data
-            const formData = {
-                name: document.getElementById('reviewer-name').value,
-                role: document.getElementById('reviewer-role').value,
-                company: document.getElementById('reviewer-company').value,
-                review: document.getElementById('review-text').value
+            const name = document.getElementById('reviewer-name').value;
+            const role = document.getElementById('reviewer-role').value;
+            const company = document.getElementById('reviewer-company').value;
+            const review = document.getElementById('review-text').value;
+
+            // Get submit button and disable it during submission
+            const submitButton = reviewForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // EmailJS template parameters
+            const templateParams = {
+                reviewer_name: name,
+                reviewer_role: role || 'Not specified',
+                reviewer_company: company || 'Not specified',
+                review_text: review,
+                to_email: 'helenudeh.va@gmail.com'
             };
 
-            // Here you can add code to send the review to your backend/email service
-            // For now, we'll just show an alert and close the modal
-            alert('Thank you for your review! We appreciate your feedback.');
-            closeReviewModal();
+            // Send email using EmailJS
+            // Note: You'll need to create a new template in EmailJS for reviews
+            // Use the same service ID: service_fpa518p
+            // Create a new template (e.g., template_review) and use its ID here
+            emailjs.send('service_fpa518p', 'template_review', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    // Show success message
+                    submitButton.textContent = 'Review Submitted!';
+                    submitButton.style.backgroundColor = '#10b981';
+                    
+                    // Reset form and close modal after a delay
+                    setTimeout(() => {
+                        reviewForm.reset();
+                        closeReviewModal();
+                        submitButton.textContent = originalButtonText;
+                        submitButton.style.backgroundColor = '';
+                        submitButton.disabled = false;
+                    }, 2000);
+                })
+                .catch(function(error) {
+                    console.log('FAILED...', error);
+                    // Show error message
+                    submitButton.textContent = 'Error - Please Try Again';
+                    submitButton.style.backgroundColor = '#ef4444';
+                    
+                    setTimeout(() => {
+                        submitButton.textContent = originalButtonText;
+                        submitButton.style.backgroundColor = '';
+                        submitButton.disabled = false;
+                    }, 3000);
+                });
         });
     }
 
