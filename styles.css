@@ -601,6 +601,19 @@ section {
     line-height: 1.8;
 }
 
+.pretty-page .about-text h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pretty-page .about-text h4:first-of-type {
+    margin-top: 0;
+}
+
+.pretty-page .about-text ul {
+    margin-bottom: 2rem;
+}
+
 .about-intro {
     font-size: 1.2rem;
     color: white;
