@@ -802,6 +802,8 @@ section {
     font-size: 1rem;
     flex: 0 0 48px;
     min-height: 48px;
+    visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -822,6 +824,8 @@ section {
         flex: 0 0 36px;
         min-height: 36px;
         font-size: 0.95rem;
+        visibility: visible;
+        opacity: 1;
     }
 }
 .service-title {
