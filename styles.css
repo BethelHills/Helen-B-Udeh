@@ -549,14 +549,14 @@ body {
     width: clamp(180px, 25vw, 320px);
     height: clamp(180px, 25vw, 320px);
     border-radius: 50%;
-    object-fit: cover;
-    /* position image to show top (head) instead of centering */
-    object-position: 50% 20%;
+    object-fit: contain;
+    object-position: center;
     border: clamp(3px, 0.5vw, 5px) solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
     max-width: 100%;
     display: block;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .hero-photo:hover {
