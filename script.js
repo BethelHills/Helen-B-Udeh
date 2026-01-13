@@ -794,7 +794,7 @@ if (reviewModal && leaveReviewBtn) {
                 reviewer_name: name,
                 reviewer_role: role || 'Not specified',
                 reviewer_company: company || 'Not specified',
-                review_text: review,
+                review: review,
                 to_email: 'helenudeh.va@gmail.com'
             };
 
