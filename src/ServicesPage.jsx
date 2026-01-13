@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
+import logo from "../assets/images/pretty-prodesk-logo.png";
 
 export default function ServicesPage() {
   return (
     <div className="w-full bg-white text-black">
       {/* Hero Section */}
       <section className="py-24 px-6 text-center max-w-4xl mx-auto">
+        <div className="mb-8 flex justify-center">
+          <img src={logo} alt="Pretty Prodesk logo" className="h-auto max-w-[300px] w-full object-contain" />
+        </div>
         <h1 className="text-4xl font-bold mb-4">Where executive precision meets polished support.</h1>
         <p className="text-lg leading-relaxed mb-10">
           Premium Executive and Administrative Support for Modern Leaders. We help busy CEOs, C-Suite Executives,
