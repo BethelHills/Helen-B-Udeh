@@ -137,6 +137,38 @@ body {
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
+/* Pretty ProDesk logo - preserve white background */
+.pretty-page .logo-image {
+    filter: none !important;
+    -webkit-filter: none !important;
+    background: transparent;
+}
+
+/* Pretty ProDesk hero logo - show white background, not circular */
+.pretty-page .hero-photo {
+    border-radius: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: clamp(180px, 25vw, 320px) !important;
+    max-width: 100% !important;
+}
+
+.pretty-page .hero-photo:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Pretty ProDesk footer logo - preserve white background */
+.pretty-page .footer-brand .logo-image {
+    filter: none !important;
+    -webkit-filter: none !important;
+    background: transparent;
+}
+
 /* Scoped image rules for Pretty ProDesk page */
 .pretty-page .about-photo {
     width: 100%;
