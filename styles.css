@@ -1485,6 +1485,16 @@ section {
     pointer-events: none;
 }
 
+.footer-links h4 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    pointer-events: none;
+}
+
 .footer-links a:hover {
     color: var(--text-dark);
 }
