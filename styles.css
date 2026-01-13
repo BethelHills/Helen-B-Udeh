@@ -150,6 +150,7 @@ body {
     width: auto !important;
     max-width: 420px !important;
     min-width: 100px !important;
+    min-height: 70px !important;
     object-fit: contain !important;
     position: relative !important;
 }
