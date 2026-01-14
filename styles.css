@@ -80,8 +80,6 @@ body {
     max-width: 420px;
     object-fit: contain;
     transition: var(--transition);
-    filter: brightness(0.9) contrast(1.2);
-    -webkit-filter: brightness(0.9) contrast(1.2);
     display: block;
     visibility: visible;
     opacity: 1;
