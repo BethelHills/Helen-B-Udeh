@@ -2114,7 +2114,7 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .pretty-page .about-content {
         grid-template-columns: 1fr;
     }
